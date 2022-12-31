@@ -1,0 +1,12 @@
+global using Discord;
+global using Discord.Commands;
+global using Discord.WebSocket;
+global using Discord.Interactions;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Hosting;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.Configuration.Yaml;
+global using System.Reflection;
+global using System.Linq;
+global using weebbot.utils;
+global using weebbot.modules;
