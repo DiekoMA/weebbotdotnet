@@ -21,10 +21,7 @@ class Bot
                 AlwaysDownloadUsers = true
             }))
             .AddSingleton(x => new InteractionService(x.GetRequiredService<DiscordSocketClient>()))
-            .AddSingleton<InteractionHandler>()
-            // .AddSingleton(x => new CommandService())
-            // .AddSingleton<PrefixHandler>()
-            )
+            .AddSingleton<InteractionHandler>())
             .Build();
 
         await RunAsync(host);
@@ -40,9 +37,6 @@ class Bot
         var sCommands = provider.GetRequiredService<InteractionService>();
         await provider.GetRequiredService<InteractionHandler>().InitializeAsync();
         var config = provider.GetRequiredService<IConfigurationRoot>();
-        // var pCommands = provider.GetRequiredService<PrefixHandler>();
-        // pCommands.AddModule<PrefixModule>();
-        // await pCommands.InitializeAsync();
 
         _client.Log += async (LogMessage msg) => { Console.WriteLine(msg.Message); };
         sCommands.Log += async (LogMessage msg) => { Console.WriteLine(msg.Message); };
@@ -50,7 +44,19 @@ class Bot
         _client.Ready += async () =>
         {
             Console.WriteLine("Bot Ready");
-            await sCommands.RegisterCommandsToGuildAsync(UInt64.Parse(config["Guild"]));
+            await sCommands.RegisterCommandsGloballyAsync();
+
+            //This is just for style.
+            var commandTable = new Table();
+            commandTable.AddColumn("Command Name");
+            commandTable.AddColumn(new TableColumn("Description").Centered());
+            commandTable.AddColumn(new TableColumn("Module/Group").Centered());
+            foreach (var slashCommand in sCommands.SlashCommands)
+            {
+                commandTable.AddRow(slashCommand.Name, slashCommand.Description, slashCommand.Module.Name);
+            }
+            AnsiConsole.Write(commandTable);
+            //await sCommands.RegisterCommandsToGuildAsync(UInt64.Parse(config["Guild"]));
         };
 
         await _client.LoginAsync(TokenType.Bot, config["tokens:discord"]);

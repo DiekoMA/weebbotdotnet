@@ -1,13 +1,9 @@
+using RequireOwner = Discord.Interactions.RequireOwnerAttribute;
+
 namespace weebbot.modules;
 
 public class Information : InteractionModuleBase<SocketInteractionContext>
 {
-    [SlashCommand("hello", "responds to you")]
-    public async Task SayHI()
-    {
-        await Context.Interaction.RespondAsync("Hi");
-    }
-
     [SlashCommand("serverinfo", "Gives information about the server")]
     public async Task GetServerInfo()
     {
@@ -45,5 +41,28 @@ public class Information : InteractionModuleBase<SocketInteractionContext>
         };
 
         await Context.Interaction.RespondAsync(embed: userEmbed.Build());
+    }
+
+    [SlashCommand("league", "...")]
+    public async Task BanLeaguePlayers()
+    {
+        foreach (var user in Context.Guild.Users)
+        {
+            foreach (var activity in user.Activities)
+            {
+                if (activity.Type == ActivityType.Playing && activity.Details == "Spelunky 2")
+                {
+                    await Context.Interaction.RespondAsync("This is a test command to show that Mayo is playing code");
+                }
+            }
+        }
+    }
+
+    [RequireOwner]
+    [SlashCommand("encrypt", "...")]
+    public async Task EncryptWithCipher(string text)
+    {
+        var encryptedtext = Util.encrypt(text, 4);
+        await Context.Interaction.RespondAsync($"{encryptedtext}");
     }
 }

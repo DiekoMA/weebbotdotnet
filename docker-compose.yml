@@ -1,0 +1,9 @@
+
+version: '3.4'
+
+services:
+  weebbot:
+    image: weebbot
+    build:
+      context: .
+      dockerfile: ./Dockerfile

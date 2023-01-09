@@ -55,3 +55,17 @@ C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\obj\Debug\net7.0\
 C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\obj\Debug\net7.0\weebbot.pdb
 C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\obj\Debug\net7.0\weebbot.genruntimeconfig.cache
 C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\obj\Debug\net7.0\ref\weebbot.dll
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\JikanDotNet.dll
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\DnsClient.dll
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\MongoDB.Bson.dll
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\MongoDB.Driver.dll
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\MongoDB.Driver.Core.dll
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\MongoDB.Libmongocrypt.dll
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\SharpCompress.dll
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\Snappier.dll
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\ZstdSharp.dll
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\Spectre.Console.dll
+C:\Users\dieko\Documents\Projects\Discord Bot Projects\weebbot\bin\Debug\net7.0\RestSharp.dll

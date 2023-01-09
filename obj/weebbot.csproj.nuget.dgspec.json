@@ -72,6 +72,10 @@
               "target": "Package",
               "version": "[3.8.1, )"
             },
+            "JikanDotNet": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
             "Microsoft.Extensions.Configuration.Yaml": {
               "target": "Package",
               "version": "[2.0.0-preview2, )"
@@ -83,6 +87,22 @@
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[7.0.0-preview.6.22324.4, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.18.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.18.0, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
+            },
+            "Spectre.Console": {
+              "target": "Package",
+              "version": "[0.45.0, )"
             }
           },
           "imports": [

@@ -19,6 +19,12 @@ public class InteractionHandler
         await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), _services);
 
         _client.InteractionCreated += HandleInteraction;
+        _client.Connected += HandleOnConnected;
+    }
+
+    private async Task HandleOnConnected()
+    {
+        await _client.SetGameAsync("", "", ActivityType.Listening);
     }
 
     private async Task HandleInteraction(SocketInteraction args)
